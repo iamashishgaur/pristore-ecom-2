@@ -1,0 +1,158 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+:root {
+  --button: #f70fb6;
+  --border: #e5e5e5;
+  --buttonhover: #d01f9f;
+  --texthover: #d01f9f;
+  --body: #f1f3f6;
+  --black: #04152d; /* header Color*/
+  --black2: #041226; /* Footer Color*/
+  --black3: #020c1b;
+  --black-lighter: #1c4b91;
+  --black-light: #173d77;
+  --pink: #da2f68;
+  --orange: #f89e00;
+  --gradient: linear-gradient(98.37deg, #f89e00 0.99%, #da2f68 100%);
+}
+.step-item {
+  @apply relative flex flex-col justify-center items-center w-36;
+}
+.step-item:not(:first-child):before {
+  @apply content-[''] bg-slate-200 absolute w-full h-[3px] right-2/4 top-1/3 -translate-y-2/4;
+}
+.step {
+  @apply w-10 h-10 flex cursor-not-allowed items-center justify-center z-10 relative bg-slate-700 rounded-full font-semibold text-white;
+}
+.active .step {
+  @apply bg-sky-600 cursor-pointer;
+}
+.complete .step {
+  @apply bg-green-600;
+}
+.complete p {
+  @apply text-white;
+}
+.complete:not(:first-child):before,
+.active:not(:first-child):before {
+  @apply bg-green-600;
+}
+/* .step-item {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 9rem;
+}
+.step-item:not(:first-child):before {
+  content-['']
+  
+   bg-slate-200 
+   position: absolute ;
+   width:100%;
+   height:3px;
+
+   w-full 
+   h-[3px] 
+   right-2/4 
+   top-1/3 
+   -translate-y-2/4;
+}
+.step {
+ 
+  width:40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 10;
+  position: relative;
+  border-radius: 100%;
+  font-weight: bold;
+  color: white;
+  
+}
+.active .step {
+  background: #d01f9f;
+}
+.complete .step {
+  background: green;
+}
+.complete p {
+  color: white;
+}
+.complete:not(:first-child):before,
+.active:not(:first-child):before {
+  background: green;
+} */
+
+.formWrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 13px;
+  position: relative;
+}
+.btn {
+  color: #fff;
+  border: none;
+  outline: none;
+  font-size: 1.2rem;
+  border-radius: 4px;
+  width: 80%;
+  height: 43px;
+  margin-top: 1.1rem;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  margin: 0 auto;
+
+  background: var(--button);
+  &:hover {
+    background: var(--buttonhover);
+    box-shadow: 0px 1px 4px 1px rgb(0 0 0 / 10%),
+      0px 1px 4px -1px rgb(0 0 0 / 10%), 0px 1px 7px 1px rgb(0 0 0 / 10%);
+    color: white;
+  }
+}
+.countryfield {
+  display: block;
+  width: 100%;
+  padding: 0.375rem 0.75rem;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.5;
+  border: 1px solid var(--border);
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.formstyle {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  width: 50%;
+  margin: 0 auto;
+  margin-top: 1rem;
+}
+/* ul.react-multi-carousel-track
+  li.react-multi-carousel-item
+  .react-multi-carousel-item--active {
+  width: 20px;
+} */
+/* react-multi-carousel-item react-multi-carousel-item--active  */
+/* .react-multi-carousel-list .productCarousel {
+  border: 1px solid red;
+} */
+
+/* li.react-multi-carousel-item .react-multi-carousel-item--active {
+  width: 550px !important;
+} */
+.react-multi-carousel-item li {
+  width: 50px !important;
+}
